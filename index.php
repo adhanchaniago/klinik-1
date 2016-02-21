@@ -1,47 +1,20 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
-<link href=”compress.php” rel=”stylesheet” type=”text/css” />
-	<title>The Entrar-shadow Website form | w3layouts</title>
-		<meta charset="utf-8">
-		<link href="vendor/css/style.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!--webfonts-->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
-		<!--//webfonts-->
+<meta charset="utf-8">
+<title>Slick Login</title>
+  <meta name="description" content="slick Login">
+  <meta name="author" content="Webdesigntuts+">
+  <link rel="stylesheet" type="text/css" href="vendor/css/style_new.css" />
+  <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+  <script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+  <script type="text/javascript" src="js/placeholder.js"></script>
 </head>
 <body>
-	 <!-----start-main---->
-	 <div class="main">
-		<div class="login-form">
-			<h1>Member Login</h1>
-					<div class="head">
-						<img src="vendor/images/user.png" alt=""/>
-					</div>
-				<form name="login" action="cek_login.php" method="POST">
-						<input type="text" class="text" name="user" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
-						<input name="password" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-						<div class="submit">
-							<input type="submit" onclick="myFunction()" value="LOGIN" >
-					</div>	
-					<p><a href="#">Forgot Password ?</a></p>
-				</form>
-			</div>
-			<!--//End-login-form-->
-			 <!-----start-copyright---->
-   					<div class="copy-right">
-						<p>Template by <a href="http://w3layouts.com">w3layouts</a></p> 
-					</div>
-				<!-----//end-copyright---->
-		</div>
-			 <!-----//end-main---->
-		 		
-</body>
+  <form id="slick-login" action="cek_login.php" method="POST">
+    <label for="username">username</label><input type="text" name="user" class="placeholder" placeholder="Username">
+    <label for="password">password</label><input type="password" name="password" class="placeholder" placeholder="Password">
+    <input type="submit" value="Log In">
+  </form>
+  </body>
 </html>
