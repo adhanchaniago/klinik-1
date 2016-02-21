@@ -1,0 +1,138 @@
+body { background:url(../images/background.jpg) left top #d4d3d3; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 13px; color: #333; }
+a, a:active, a:link, a:visited { text-decoration:none; color: #FFF; }
+a:hover { text-decoration: underline; color: #CCC; }
+h1 {
+	font-size:24px;
+	font-style:italic;
+	font-weight:normal;
+	color:white;
+	line-height:35px;
+	margin-bottom:0px;
+	margin-top:80px;
+	text-align: center;
+}
+#login {
+	margin:10px 0px 0px 0px;
+	border:1px solid #666;
+	opacity:0.4;filter:alpha(opacity=40);
+	padding:20px;
+	background-color: #000;
+	-webkit-transition: all 0.6s ease-in-out;
+	border-radius:10px;
+}
+#login:hover{
+-webkit-box-shadow: 1px 1px 20px  #000;, -1px -1px 20px  #000;
+-moz-box-shadow: 1px 1px 20px  #000;,-1px -1px 20px  #000;
+box-shadow: 1px 1px 20px  #000;, -1px -1px 20px  #000;
+	
+	
+	}
+#forgot {
+	margin:0px auto 30px auto;
+	width:235px;
+	text-align: center;
+}
+p.tip {
+	padding-left:20px;
+	display:block;
+	background-image: url(../images/icons/lightbulb.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+p.error {
+	padding-left:20px;
+	display:block;
+	background-image: url(../images/icons/exclamation.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	color: #900;
+}
+.black_button {
+	margin: 0px;
+  	padding: 0px !important;
+  	border: 0px;
+  	background: transparent url('../images/but_login_span.gif') no-repeat scroll top right;
+  	color: #FFF;
+  	display:block;
+  	float: right;
+	width:105px;
+  	height: 30px;
+  	margin-right: 6px;
+  	margin-top:10px;
+  	padding-right: 12px !important;
+  	text-decoration: none;
+  	overflow: hidden;
+  	font-size: 12px;
+  	outline: none !important;
+  	cursor: pointer;
+  	font-weight: bold;
+}
+.black_button span {
+	background: url('../images/but_login_left.gif') no-repeat left top;
+	display: block;
+	line-height: 30px;
+	padding: 0px 0px 0px 12px;
+	outline: none !important;
+	float:right;
+}
+.inputText {
+	padding:7px;
+	border-radius:5px;
+	border:1px solid #999;
+	font-size:16px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #333;
+	width:270px;
+	margin:5px;
+	background:#FFFFF8;
+	-webkit-transition: all 0.6s ease-in-out;
+}	
+.inputText:hover{
+-moz-transform:scale(1.1);
+-webkit-transform:scale(1.1);
+	
+	
+	
+	}
+	}
+.forgotlink {
+	margin: 0px;
+  	padding: 0px !important;
+  	border: 0px;
+  	background: transparent url('../images/forgot_bg_span.gif') no-repeat scroll top right;
+  	color: #000 !important;
+  	display:block;
+  	float: left;
+  	height: 30px;
+  	margin-right: 6px;
+  	padding-right: 15px !important;
+  	text-decoration: none;
+  	overflow: hidden;
+  	font-size: 11px;
+  	outline: none !important;
+  	cursor: pointer;
+  	font-weight: bold;
+}
+.forgotlink:hover {
+	color: #666 !important;
+}
+.forgotlink span {
+	background-color: #f;
+	padding: 0px 15px 0px 15px;
+	outline: none !important;
+	float:left;	
+	height:20px;
+	opacity:0.4;filter:alpha(opacity=40);
+	color: #000;
+	width: 200px;
+
+}
+
+#forgotform {
+	margin:0px auto;
+	width:280px;
+	padding:10px;
+	border:1px solid #666;
+	background:#CCC;
+	display:none;
+}

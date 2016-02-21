@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Koreksi Mahasiswa</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<?
+	include("koneksi.php");
+	$noreg=$_GET['noreg'];
+	$q=mysql_query("select * from tbl_pasien where noreg='$noregS' LIMIT 1");
+	$dataku=mysql_fetch_object($q);
+?>
+<form action="update-data-mahasiswa.php" method="post" enctype="multipart/form-data" name="FKoreksi">
+  <table width="600" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#669900">
+    <tr>
+      <td height="50" align="center" bgcolor="#669900"><strong><font color="#FFFFFF">KOREKSI DATA</font></strong></td>
+    </tr>
+    <tr>
+      <td><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">
+          <tr>
+            <td width="99">NIM</td>
+            <td width="9">:</td>
+            <td width="287"><input name="noreg" type="text" id="noreg" size="10" maxlength="10" value="<?php echo $dataku->noreg?>" readonly=""></td>
+            <td width="163" rowspan="7" align="center" valign="top"><img src="<?php echo  $dataku->photo?>" alt="<?php echo  $dataku->nama?>" width="100" border="1"/></td>
+          </tr>
+          <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td><input name="nama" type="text" id="nama" size="30" maxlength="30" value="<?php echo $dataku->nama?>"></td>
+          </tr>
+          <tr>
+            <td>Tempat Lahir</td>
+            <td>:</td>
+            <td><input name="tempat_lahir" type="text" id="tempat_lahir" size="30" maxlength="30" value="<?php echo $dataku->tempat_lahir?>"></td>
+          </tr>
+          <tr>
+            <td>Tanggal Lahir</td>
+            <td>:</td>
+            <td><select name="tgl" size="1" id="tgl">
+                <?
+		     for ($i=1;$i<=31;$i++)
+			 {
+				if($tanggal==$i) {
+					echo "<option value=".$i." selected>".$i."</option>";
+				} else {
+					echo "<option value=".$i.">".$i."</option>";
+				}
+			 }
+		  ?>
+              </select>
+              <select name="bln" size="1" id="bln">
+                <?
+		     $namabulan=array("","Januari","Pebruari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+		     for ($i=1;$i<=12;$i++)
+			 {
+				if($bulan==$i) {
+					echo "<option value=".$i." selected>".$namabulan[$i]."</option>";
+				} else {
+					echo "<option value=".$i.">".$namabulan[$i]."</option>";
+				}
+			 }
+		  ?>
+              </select>
+              <select name="thn" size="1" id="thn">
+                <?
+			  echo "<option value=".$tahun.">".$tahun."</option>";
+		     for ($i=1985;$i<=2000;$i++)
+			 {
+				if($tahun==$i) {
+					echo "<option value=".$i." selected>".$i."</option>";
+				} else {
+					echo "<option value=".$i.">".$i."</option>";
+				}
+			 }
+		  ?>
+              </select></td>
+          </tr>
+          <tr>
+            <td>Alamat</td>
+            <td>:</td>
+            <td><textarea name="alamat" cols="30" rows="5" id="alamat"><?php echo $dataku->alamat?></textarea></td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td><input name="jenis_kelamin" id="jenis_kelamin" type="radio" value="L" <?php if($dataku->jenis_kelamin=='L') echo "checked";?>>
+              Laki-laki
+              <input name="jenis_kelamin" id="jenis_kelamin" type="radio" value="P" <?php if($dataku->jenis_kelamin=='P') echo "checked";?>>
+              Perempuan </td>
+          </tr>
+          <tr>
+            <td>Photo</td>
+            <td>:</td>
+            <td><input type="file" name="photo" id="photo"></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Pilih photo jika ingin diganti</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="50" colspan="4" align="center"><input name="fok" type="submit" id="fok" value="OK">
+              <input name="fulang" type="reset" id="fulang" value="Ulangi"><input name="fulang" type="button" id="fulang" value="Batal" onClick="javascript:history.back()"></td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+</form>
+  <div align="center"><a href="index.php">Menu Utama</a></div>
+</body>
+</html>{
+ambildatabase('awal');
+    
+    
+}
